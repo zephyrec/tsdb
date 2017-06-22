@@ -32,8 +32,29 @@ Links on the Root Resource are identified by the following possible
 relations:
 
  - **https://tsdb.org/relations/has-ts-collection**: Is used to mark
-   the link on the Root Resource leading to the Time Series collection.
+   the link on the Root Resource leading to the Time Series Collection.
 
+# Time Series Collection
+
+The Time Series collection provide access to the set of Time Series
+stored on the Time Series Database. It support pagination trough the
+standard link relations [prev][ltp] and [next][ltn].
+
+Pagination is controlled trough the `start` and `items` query
+parameters. The [prev][ltp] link will only be available on the
+collection representation if the `start` query parameter is a valid
+number. The [next][ltn] link will only be available if the `items`
+query parameter is a valid number.
+
+    Notice that the `next` link will be available in the response even
+    if the amount of Time Series in the response is less that the amount
+    requested (through the `items` query parameter). Additionally its
+    posible that the `next` link be present even if there is no more
+    items in the collection. This two special cases need to be handled
+    acordingly by the client.
+
+[ltn]: https://www.w3.org/TR/html5/links.html#link-type-next
+[ltp]: https://www.w3.org/TR/html5/links.html#link-type-prev
 [rest]: https://en.wikipedia.org/wiki/Representational_state_transfer
 [rmm]: http://martinfowler.com/articles/richardsonMaturityModel.html
 [tsdb]: https://en.wikipedia.org/wiki/Time_series_database
