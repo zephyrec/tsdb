@@ -6,3 +6,8 @@ layout: page
 ---
 
 A Time Series Database built for the Web.
+
+# Documentation
+
+  - [Data Model](./data-model/)
+  - [REST API](./rest-api/)
