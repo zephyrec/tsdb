@@ -46,13 +46,6 @@ collection representation if the `start` query parameter is a valid
 number. The [next][ltn] link will only be available if the `items`
 query parameter is a valid number.
 
-    Notice that the `next` link will be available in the response even
-    if the amount of Time Series in the response is less that the amount
-    requested (through the `items` query parameter). Additionally its
-    posible that the `next` link be present even if there is no more
-    items in the collection. This two special cases need to be handled
-    acordingly by the client.
-
 [ltn]: https://www.w3.org/TR/html5/links.html#link-type-next
 [ltp]: https://www.w3.org/TR/html5/links.html#link-type-prev
 [rest]: https://en.wikipedia.org/wiki/Representational_state_transfer
