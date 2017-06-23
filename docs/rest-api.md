@@ -31,8 +31,9 @@ resources that are part of its API.
 Links on the Root Resource are identified by the following possible
 relations:
 
- - **https://tsdb.org/relations/has-ts-collection**: Is used to mark
-   the link on the Root Resource leading to the Time Series Collection.
+ - **[https://zephyrec.github.io/tsdb/rest-api/#has-ts-collection](#has-ts-collection)**:
+   Is used to mark the link on the Root Resource leading to the
+   [Time Series Collection](#time-series-collection).
 
 # Time Series Collection
 
@@ -45,6 +46,15 @@ parameters. The [prev][ltp] link will only be available on the
 collection representation if the `start` query parameter is a valid
 number. The [next][ltn] link will only be available if the `items`
 query parameter is a valid number.
+
+# Has TS Collection
+
+[https://zephyrec.github.io/tsdb/rest-api/#has-ts-collection](#has-ts-collection)
+is a link relation used on the Time Series Database to indicate
+that the current resource has a associated Time Series Collection.
+This relation is valid for the following elements:
+
+ - The [Root Resource](#root-resource)
 
 [ltn]: https://www.w3.org/TR/html5/links.html#link-type-next
 [ltp]: https://www.w3.org/TR/html5/links.html#link-type-prev
